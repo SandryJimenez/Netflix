@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <main>
+      <!-- Barra de navegacion -->
+      <header>
+        <div class="uno">
+            <img src="./img/logo.png" alt=Logo de netflix">
+        </div>
+        <nav class="barra">
+          <a href="#" class="arriba">Home</a>
+          <a href="#" class="arriba">Tv Show</a>
+          <a href="#" class="arriba">Latest</a>
+          <a href="#" class="arriba">My List</a>
+        </nav>
+      </header>
+      <!-- Seccion -->
+      <section class="pantalla">
+        <img src="./img/tms.jpg" alt="imagen de fondo" class="fondo" />
+        <div class="primero">
+          <img src="./img/logoletras.png" alt="logo n" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+            perferendis exercitationem quod laudantium quis id molestias
+            accusantium iure dolorum incidunt, praesentium et unde nam dolor,
+            suscipit nisi ducimus blanditiis explicabo?
+          </p>
+          <div class="segundo">
+            <button>PLAY</button>
+            <button>MY LIST</button>
+          </div>
+          <a href="#" class="final" onclick="toggleVideo()">
+            <img src="./img/play.png" alt="" />
+            <span>Ver Trailer</span>
+          </a>
+        </div>
+      </section>
+      <section class="trailer">
+        <video src="./img/trailer.mp4" controls="true"></video>
+        <img
+          src="./img/close.png"
+          alt="Cerrar"
+          class="close"
+          onclick="toggleVideo();"
+        />
+
+      </section>
+    </main>
+    <script>
+        function toggleVideo() {
+          const trailer = document.querySelector(".trailer");
+          const video = document.querySelector("video");
+          trailer.classList.toggle("active");
+          video.currentTime = 0;
+          video.pause();
+        }
+      </script>
+  </body>
+</html>
